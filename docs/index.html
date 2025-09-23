@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temporizador</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- izquierda -->
+    <div class="history">
+      <h2>Historial</h2>
+      <ul id="historyList"></ul>
+    </div>
+
+    <!-- derecha -->
+    <div class="timer-section">
+        <!-- reloj -->
+    <div id="datetime"></div>
+      <h1>Temporizador</h1>
+
+      <input type="text" id="titleInput" placeholder="Tarea" maxlength="18">
+      <p id="errorMsg" class="error"></p>
+
+      <div id="timer">00:00</div>
+
+      <div class="buttons" role="group">
+        <button class="btn btn-time" onclick="setTime(45)" aria-label="agregar 45 min">45 min</button>
+        <button class="btn btn-time" onclick="setTime(30)" aria-label="agregar 30 min">30 min</button>
+        <button class="btn btn-time" onclick="setTime(10)" aria-label="agregar 10 min">10 min</button>
+      </div>
+
+      <div role="group">
+        <button class="btn btn-go" onclick="startTimer()" aria-label="iniciar temporizador">Iniciar</button>
+        <button class="btn btn-reset" onclick="resetTimer()" aria-label="reiniciar temporizador">Reiniciar</button>
+      </div>
+
+      <div>
+        <button id="darkModeBtn" class="btn btn-dark" aria-label="cambiar a modo oscuro">🌙 Modo oscuro</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+:root {
+  --back: #6E7769;
+  --back2: #E2E8CE;
+  --clock: #FF7F11;
+  --bTime: #576B4C;
+  --bRes: #970C36;
+}
+
+
+body.dark-mode {
+  --back: #323630;
+  --back2: #1D2419;
+  --clock: #FFC999;
+  --bTime: #4a5d42;
+  --bRes: #a52c50;
+}
+
+body {
+  font-family: "Atkinson Hyperlegible Mono", sans-serif;
+  background: var(--back);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  margin-top: 20px;
+}
+
+.history {
+  color: var(--clock);
+  flex: 1;
+  background: var(--back2);
+  padding: 15px;
+  margin-right: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.timer-section {
+  flex: 2;
+  background: var(--back2);
+  color: var(--clock);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#timer {
+  font-size: 150px;
+  margin: 20px 0;
+}
+
+/*  botones */
+.btn {
+  font-family: "Atkinson Hyperlegible Mono", sans-serif;
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-time {
+  background: var(--bTime);
+  color: var(--back2);
+}
+
+.btn-go {
+  background: var(--clock);
+  color: var(--back2);
+}
+
+.btn-reset {
+  background: var(--bRes);
+  color: var(--back2);
+}
+
+.btn-dark {
+  background: var(--back);
+  color: var(--back2);
+}
+
+/* Input */
+input {
+  font-family: "Atkinson Hyperlegible Mono", sans-serif;
+  padding: 5px;
+  width: 25%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.error {
+  color: var(--bRes);
+  font-size: 12px;
+  margin: 5px 0 15px 0;
+  height: 18px;
+}
+
+
+#datetime {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--back);
+}
