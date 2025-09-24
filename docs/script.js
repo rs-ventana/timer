@@ -142,7 +142,8 @@ updateDisplay();
 function updateDateTime() {
   const now = new Date();
   const optionsDate = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
-  const optionsTime = { hour: "2-digit", minute: "2-digit" };
+  const optionsTime = { hour: "2-digit", minute: "2-digit", second: "2-digit" };
+
 
   const dateStr = now.toLocaleDateString("es-ES", optionsDate);
   const timeStr = now.toLocaleTimeString("es-ES", optionsTime);
