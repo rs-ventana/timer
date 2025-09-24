@@ -150,6 +150,6 @@ function updateDateTime() {
   document.getElementById("datetime").textContent = `${dateStr} | ${timeStr}`;
 }
 
-
+setInterval(updateDateTime, 1000);
 // ejecutar 
 updateDateTime();
