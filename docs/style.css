@@ -139,5 +139,5 @@ input {
 @media (max-width: 900px) {
   .container { flex-direction: column-reverse;  width: 95%; }
   input { width: 80%; }
-  #timer { font-size: 48px; }
+  #timer { font-size: 120px; }
 }
