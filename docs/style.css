@@ -137,7 +137,7 @@ input {
 
 /* responsividad */
 @media (max-width: 900px) {
-  .container { flex-direction: column; width: 95%; }
+  .container { flex-direction: column-reverse;  width: 95%; }
   input { width: 80%; }
   #timer { font-size: 48px; }
 }
