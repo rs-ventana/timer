@@ -1,4 +1,5 @@
 :root {
+  /*  modo claro */
   --back: #6E7769;
   --back2: #E2E8CE;
   --clock: #FF7F11;
@@ -6,7 +7,7 @@
   --bRes: #970C36;
 }
 
-
+/*  modo oscuro  */
 body.dark-mode {
   --back: #323630;
   --back2: #1D2419;
@@ -23,12 +24,14 @@ body {
   justify-content: center;
   align-items: flex-start;
   height: 100vh;
+  color: var(--clock);
 }
 
 .container {
   display: flex;
   width: 80%;
   margin-top: 20px;
+  gap: 20px;
 }
 
 .history {
@@ -36,9 +39,17 @@ body {
   flex: 1;
   background: var(--back2);
   padding: 15px;
-  margin-right: 20px;
   border-radius: 10px;
   text-align: center;
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  max-height: 150px;
+  overflow-y: auto;
+  text-align: left;
 }
 
 .timer-section {
@@ -50,64 +61,83 @@ body {
   text-align: center;
 }
 
-#timer {
-  font-size: 150px;
-  margin: 20px 0;
+#datetime {
+  font-size: 14px;
+  font-weight:600;
+  margin-bottom: 8px;
+  color: var(--bTime);
 }
 
-/*  botones */
+#timer {
+  font-size: 150px;
+  margin: 20px ;
+}
+
+/* general botones */
 .btn {
   font-family: "Atkinson Hyperlegible Mono", sans-serif;
   margin: 5px;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: opacity 0.3s;
+  transition: opacity 0.15s, transform 0.12s;
+  font-size: 14px;
 }
-.btn:hover {
-  opacity: 0.85;
-}
+.btn:active { transform: translateY(1px); }
 
+/* especifico */
 .btn-time {
   background: var(--bTime);
   color: var(--back2);
 }
-
 .btn-go {
   background: var(--clock);
   color: var(--back2);
 }
-
 .btn-reset {
   background: var(--bRes);
   color: var(--back2);
 }
-
 .btn-dark {
   background: var(--back);
   color: var(--back2);
 }
 
+.btn:hover { opacity: 0.9; }
+
+#darkModeBtn {
+  font-family: "Atkinson Hyperlegible Mono", sans-serif;
+}
+
 /* Input */
 input {
   font-family: "Atkinson Hyperlegible Mono", sans-serif;
-  padding: 5px;
-  width: 25%;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  padding: 8px;
+  width: 40%;
+  border-radius: 6px;
+  border: 1px solid var(--back)(0,0,0,0.15);
 }
 
 .error {
   color: var(--bRes);
   font-size: 12px;
+  font-style: bold;
   margin: 5px 0 15px 0;
   height: 18px;
 }
 
+/* borrar */
+#clearHistoryBtn {
+  margin-top: 119%;
+  font-size: 11px;
+  padding: 8px 12px;
 
-#datetime {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: var(--back);
+}
+
+/* responsividad */
+@media (max-width: 900px) {
+  .container { flex-direction: column; width: 95%; }
+  input { width: 80%; }
+  #timer { font-size: 48px; }
 }
